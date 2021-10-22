@@ -1,0 +1,23 @@
+In USB Config.h
+Line 224
+  #define USB_CFG_VENDOR_ID 0x32, 0x15
+    Remember to reverse the order So 1532 from USB docs becomes 0x32,0x15
+
+Line 233
+  #define USB_CFG_DEVICE_ID 0x21, 0x0f
+  Device ID for the ChromaDock
+
+
+
+New Sketch
+Sketch -> Include Library -> Digistump Mouse
+
+Strip the example program down to just the following:
+
+void setup() {
+  DigiMouse.begin();
+}
+
+void loop() {
+  DigiMouse.delay(500);
+}
